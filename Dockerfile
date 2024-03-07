@@ -1,5 +1,5 @@
 # Utiliser l'image ubuntu:focal comme image de base
-FROM ubuntu:focal-20240216
+FROM ubuntu:focal
 
 # Mettre à jour le système et installer les paquets nécessaires
 RUN apt-get update \
@@ -54,4 +54,3 @@ RUN apt-get update \
 VOLUME [ "/sys/fs/cgroup" ]
 
 CMD ["/usr/sbin/init"]
-

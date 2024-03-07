@@ -9,3 +9,4 @@ mysqldump -u $DB_USER -p$DB_PASSWORD $DB_NAME > "/var/backups/bdd/bdd_$(date +%d
 
 ##sauvegarder 2 fois par jour
 # 0 */12 * * * /home/vagrant/cron_script.sh >> /var/backups/bdd/cron_script.log 2>&1
+# */2 * * * * /home/vagrant/cron_script.sh >> /var/backups/bdd/cron_script.log 2>&1

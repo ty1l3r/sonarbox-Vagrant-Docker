@@ -1,0 +1,8 @@
+[Unit]
+Description=Startup Script
+
+[Service]
+ExecStart=/etc/systemd/system/startup-script.sh
+
+[Install]
+WantedBy=multi-user.target
