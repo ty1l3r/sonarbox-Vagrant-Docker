@@ -1,0 +1,30 @@
+sudo mariadb -u root -p (mdp : tester)
+CREATE USER 'tester'@'localhost' IDENTIFIED BY 'tester';
+CREATE DATABASE sonarbox;
+GRANT ALL PRIVILEGES ON *.* TO 'tester'@'localhost';
+REVOKE DROP ON *.* FROM 'tester'@'localhost';FLUSH PRIVILEGES;
+FLUSH PRIVILEGES;
+
+SHOW DATABASES; 
+SELECT User FROM mysql.user; 
+
+fake db 
+
+USE sonarbox
+
+CREATE TABLE IF NOT EXISTS USERS (
+    ID int NOT NULL AUTO_INCREMENT,
+    Nom varchar(50) NOT NULL,
+    Prenom varchar(50) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+# Vérifier la table : SHOW TABLES;
+
+#insérer un jeux de donnée : INSERT INTO USERS (Nom, Prenom) VALUES ('Dupont', 'Jean');
+# Véridier : SELECT * FROM USERS;
+
+
+supprimer la sauvagarde des backups rm -rf /var/backups/bdd/*
+
+#lancer manuellement le script save :  mysqldump -u tester -ptester sonarbox > /var/backups/bdd/bdd_$(date +%d-%m-%Y-%H:%M:%S).sql
