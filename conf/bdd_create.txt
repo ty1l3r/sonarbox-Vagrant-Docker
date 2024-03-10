@@ -2,7 +2,7 @@ sudo mariadb -u root -p (mdp : tester)
 CREATE USER 'tester'@'localhost' IDENTIFIED BY 'tester';
 CREATE DATABASE sonarbox;
 GRANT ALL PRIVILEGES ON *.* TO 'tester'@'localhost';
-REVOKE DROP ON *.* FROM 'tester'@'localhost';FLUSH PRIVILEGES;
+REVOKE DROP ON *.* FROM 'tester'@'localhost';
 FLUSH PRIVILEGES;
 
 SHOW DATABASES; 

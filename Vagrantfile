@@ -5,13 +5,16 @@ ENV['VAGRANT_DEFAULT_PROVIDER'] = 'docker'
 Vagrant.configure("2") do |config|
   # Définit une nouvelle machine virtuelle nommée "admin"
   config.vm.define "admin" do |admin|
-    #Partage de fichier de sauvagarde mariadb
-    #admin.vm.synced_folder "/vagrant/backups/mariadb", "/var/backups/mariadb"
+    #Partage des fichiers de sauvegarde
+    #admin.vm.synced_folder "backups/mariadb", "/vagrant/backups/mariadb"
+    #admin.vm.synced_folder "backups/site", "/vagrant/backups/site"
+    #admin.vm.synced_folder "backups/conf", "/vagrant/backups/conf"
     # Configure un réseau privé avec une adresse IP spécifique
     admin.vm.network :private_network, ip: "192.168.10.10", netmask: 24
     # Redirige les ports 80 et 443 du conteneur vers les ports 80 et 443 de l'hôte
     admin.vm.network "forwarded_port", guest: 80, host: 80
     admin.vm.network "forwarded_port", guest: 443, host: 443
+    admin.vm.network "forwarded_port", guest: 3306, host: 3306
     # Configure le fournisseur de la machine virtuelle pour utiliser Docker
     admin.vm.provider "docker" do |d|
       # Définit le répertoire de construction pour Docker

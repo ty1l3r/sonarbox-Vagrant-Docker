@@ -51,4 +51,9 @@ Nous avons créé un script pour configurer le débogage PHP au démarrage du co
 
 En résumé, ce script résout le problème en s'assurant que le débogage PHP est correctement configuré chaque fois que le conteneur est démarré. Il fait cela en installant un service systemd qui exécute un script de démarrage au démarrage du conteneur. Ce script de démarrage contient les commandes nécessaires pour configurer le débogage PHP.
             
-            
+
+SAUVEGARDE MARIADB
+dans maraidb.conf.d/50-server.cnf
+bind-address            = 0.0.0.0
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'tester';
+test de connection sur machine local : mysql -h 127.0.0.1 -P 3307 -u root -p
