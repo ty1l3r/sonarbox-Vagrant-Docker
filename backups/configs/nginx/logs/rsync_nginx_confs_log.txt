@@ -1,0 +1,12 @@
+receiving incremental file list
+nginx.conf
+              0   0%    0.00kB/s    0:00:00            2,286 100%    2.18MB/s    0:00:00 (xfr#1, to-chk=0/1)
+
+sent 43 bytes  received 1,138 bytes  2,362.00 bytes/sec
+total size is 2,286  speedup is 1.94
+receiving incremental file list
+nginx.conf
+              0   0%    0.00kB/s    0:00:00            2,286 100%    2.18MB/s    0:00:00 (xfr#1, to-chk=0/1)
+
+sent 43 bytes  received 1,138 bytes  787.33 bytes/sec
+total size is 2,286  speedup is 1.94

@@ -1,0 +1,32 @@
+receiving incremental file list
+mysql/
+mysql/mariadb.cnf
+              0   0%    0.00kB/s    0:00:00              869 100%  848.63kB/s    0:00:00 (xfr#1, to-chk=10/12)
+mysql/my.cnf -> /etc/alternatives/my.cnf
+mysql/my.cnf.fallback
+              0   0%    0.00kB/s    0:00:00              839 100%  819.34kB/s    0:00:00 (xfr#2, to-chk=8/12)
+mysql/conf.d/
+mysql/conf.d/mysql.cnf
+              0   0%    0.00kB/s    0:00:00                8 100%    7.81kB/s    0:00:00 (xfr#3, to-chk=5/12)
+mysql/conf.d/mysqldump.cnf
+              0   0%    0.00kB/s    0:00:00               55 100%   53.71kB/s    0:00:00 (xfr#4, to-chk=4/12)
+mysql/mariadb.conf.d/
+mysql/mariadb.conf.d/50-client.cnf
+              0   0%    0.00kB/s    0:00:00              733 100%  715.82kB/s    0:00:00 (xfr#5, to-chk=3/12)
+mysql/mariadb.conf.d/50-mysql-clients.cnf
+              0   0%    0.00kB/s    0:00:00              336 100%  328.12kB/s    0:00:00 (xfr#6, to-chk=2/12)
+mysql/mariadb.conf.d/50-mysqld_safe.cnf
+              0   0%    0.00kB/s    0:00:00            1,032 100% 1007.81kB/s    0:00:00 (xfr#7, to-chk=1/12)
+mysql/mariadb.conf.d/50-server.cnf
+              0   0%    0.00kB/s    0:00:00            3,940 100%    3.76MB/s    0:00:00 (xfr#8, to-chk=0/12)
+
+sent 229 bytes  received 4,531 bytes  9,520.00 bytes/sec
+total size is 7,836  speedup is 1.65
+receiving incremental file list
+
+sent 61 bytes  received 336 bytes  794.00 bytes/sec
+total size is 7,836  speedup is 19.74
+receiving incremental file list
+
+sent 61 bytes  received 336 bytes  794.00 bytes/sec
+total size is 7,836  speedup is 19.74
