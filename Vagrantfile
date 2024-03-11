@@ -96,16 +96,16 @@ Vagrant.configure("2") do |config|
       sudo systemctl enable cron
       sudo systemctl start cron
       # Création des fichiers bakcups et definitions des droits. 
-      sudo mkdir -p /var/backups/bdd && sudo chmod 754 /var/backups/bdd && sudo chown -R vagrant:vagrant /var/backups/bdd
-      sudo mkdir -p /var/backups/conf && sudo chmod 754 /var/backups/conf && sudo chown -R vagrant:vagrant /var/backups/conf
-      sudo mkdir -p /var/backups/site && sudo chmod 754 /var/backups/site && sudo chown -R vagrant:vagrant /var/backups/site
+      #sudo mkdir -p /var/backups/bdd && sudo chmod 754 /var/backups/bdd && sudo chown -R vagrant:vagrant /var/backups/bdd
+      #sudo mkdir -p /var/backups/conf && sudo chmod 754 /var/backups/conf && sudo chown -R vagrant:vagrant /var/backups/conf
+      #sudo mkdir -p /var/backups/site && sudo chmod 754 /var/backups/site && sudo chown -R vagrant:vagrant /var/backups/site
       # Copie le fichier cron_script.sh dans le répertoire approprié
-      sudo cp /vagrant/conf/cron_script.sh /home/vagrant/cron_script.sh
+      #sudo cp /vagrant/conf/cron_script.sh /home/vagrant/cron_script.sh
       # Rend le script exécutable
-      sudo chmod 755 /home/vagrant/cron_script.sh
-      sudo chown vagrant:vagrant /home/vagrant/cron_script.sh
+      #sudo chmod 755 /home/vagrant/cron_script.sh
+      #sudo chown vagrant:vagrant /home/vagrant/cron_script.sh
       # Ajoute une tâche cron pour exécuter le script toutes les 12 heures et redirige la sortie vers un fichier de log
-      echo "0 */12 * * * /home/vagrant/cron_script.sh >> /var/backups/bdd/cron_script.log 2>&1" | sudo crontab -u vagrant - 
+      #echo "0 */12 * * * /home/vagrant/cron_script.sh >> /var/backups/bdd/cron_script.log 2>&1" | sudo crontab -u vagrant - 
     SHELL
   end
 end
